@@ -19,7 +19,9 @@
 
 
 }
-
+.separation{
+    display: flex;
+}
 article,
 body,
 html {
@@ -314,10 +316,12 @@ ul{
 
 .foot{
     display: flex;
-    background-color: ;
 
 }
 
 
 
 
+.Quali{
+    display: flex;
+}
