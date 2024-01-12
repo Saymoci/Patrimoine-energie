@@ -1,0 +1,327 @@
+@import url('./style/card.css');
+@import url('./style/carousel.css');
+* {
+    margin: 0;
+
+}
+
+:root {
+    /* Gestion d'image de la réalisation */
+    --RImg1: url("./../img/réalisation/1.jpeg");
+    --RImg2: url("./../img/réalisation/2.jpeg");
+    --RImg3: url("./../img/réalisation/3.jpeg");
+    --RImg4: url("./../img/réalisation/4.jpeg");
+    --RImg5: url("./img/réalisation/WhatsApp Image 2023-12-13 at 15.55.03(2).jpeg");
+    --RImg6: url("./img/réalisation/WhatsApp Image 2023-12-13 at 15.55.03(3).jpeg");
+    --RImg7: url("./img/réalisation/WhatsApp Image 2023-12-13 at 15.55.03.jpeg");
+    --RImg8: url("./img/logo.jpeg");
+    --bordure1: 30px;
+
+
+}
+.separation{
+    display: flex;
+}
+article,
+body,
+html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+    max-width: 100%;
+    
+}
+body{
+    background: linear-gradient( beige, grey);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* HERO */
+.hero{
+    min-height: 300px;
+    height: 800px;
+    background-image: url("https://spaces.w3schools.com/images/KRELIShKxTM.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-box-shadow: inset 0px 0px 300px 0px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: inset 0px 0px 3000px 2000px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0px 0px 300px 2000px rgba(255, 255, 255, 0.8);
+}
+
+.hero .text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .hero .text .pre-title {
+    font-size: var(--font-2x-large);
+  }
+  .hero .text .title {
+    font-size: var(--font-5x-large);
+  }
+  .hero .text .title span {
+    color: var(--title-span-color);
+    border-bottom: 5px solid var(--title-span-color);
+  }
+  .hero .text .post-title {
+    font-size: xx-large;
+  }
+
+/* Create a Parallax Effect */
+.bgimg-1{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(0);
+    background-image: url('./img/parrallex-1.jpg');
+    min-height: 100%;
+}
+
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 400px;
+    }
+}
+
+/* style du header */
+header {
+    /*background-color: grey;*/
+    /*position: sticky;*/
+    /*z-index: 3;*/
+    /*/* font-size: 120%; */
+    /*color: white;*/
+    /*text-align: center;*/
+    /*padding: 5px;*/
+    /*/* width: 100%; */
+    /*/* border-radius: 50px; */
+    /*top: 0px;*/
+    /*box-shadow: 0px 5px 10px 5px lightgray;*/
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    
+}
+header a {
+
+    margin-right: 40px;
+    text-decoration: none;
+    color: white;
+}
+.contenue > h2{
+    background-color: beige;
+    width: 70%;
+    margin: auto;
+    border: 10px unset black;
+    border-radius: 50px;
+    color: black;
+    /* margin-bottom: 2px; */
+}
+/* --------------------- bloc de presentation --------------------- */
+.nom_societe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 90%;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    border-radius: 30px;
+    /* padding: 10px; */
+
+    /* background-color: rgb(0, 0, 0); */
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    /* z-index: 2; */
+    /* padding: 20px; */
+    text-align: center;
+}
+.nom_societe  span {
+    /* text-align: center !important; */
+    /* padding: 12px 14px !important; */
+    letter-spacing: 4px;
+    animation: opac 4s;
+    /* width: 70%; */
+    font-size: 120%;
+
+
+}
+@keyframes opac {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* --------------------- Texte de presentation --------------------- */
+.nom_societe .right img {
+    width: 100%;
+    /* height: 20px; */
+    border-radius: 70px;
+    margin: 2%;
+}
+
+.nom_societe img:hover {
+    opacity: 0.9;
+}
+
+
+
+
+
+/* --------------------- Qui Sommes nous --------------------- */
+.contenue {
+    text-align: center;
+    background-color: #777;
+    box-shadow: 0px 0px 10px 8px beige;
+    color: beige;
+    /* width: 80%; */
+    margin: auto;
+    width: 80%;
+    opacity: 0.9;
+
+    filter: blur(0px);
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    backdrop-filter: blur(100px);
+    text-align: center;
+
+
+}
+.contenue > div {
+    margin-bottom:30px ;
+    margin-top:30px ;
+}
+.information{
+    /* Bloc d'information */
+    /* display: flex; */
+    /* columns: 2; */
+    padding-block: var(--bordure1) ;
+    margin: auto;
+    width: 85%;
+    
+}
+.Whois{
+    width: 100%;
+    transition: transform 2s, box-shadow 2s;
+    max-width: 600px;
+    height: max-content;
+    background: linear-gradient(beige , #777);
+    margin: auto;
+    border: 5px lightcyan ridge;
+    box-shadow: 0px 0px 10px 8px beige;
+    border-radius: var(--bordure1);
+    overflow: hidden;
+
+    
+}
+.Whois h2{
+    background-color: #777;
+}
+.photo img,.foot img,
+.image img{
+    /* Gestion des Images du `Whois` */
+    border-bottom-left-radius: var(--bordure1); border-bottom-right-radius: var(--bordure1);
+    width: 100%;
+}
+
+.info p {
+    font-size: larger;
+    text-align: left;
+    padding-inline: 20px;
+}
+
+
+
+.photo {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    color: black;
+    columns: 4;
+    font-weight: 400px;
+    background: rgb(rgba(128, 128, 128, 0.326));
+    border-block: 5px ridge silver;
+    border-radius: 20px;
+    background: linear-gradient(beige , grey , beige);
+    /* transition: background 2s; */
+    /* float: right; */
+
+
+}
+
+ul{
+    text-decoration: none;
+    transform: none;
+}
+/* Gestion de la galerie */
+.photo div, .foot div {
+    background: radial-gradient(beige, grey);
+    position: relative;
+    overflow: hidden;
+    transition-delay: 0.5s;
+    transition: transform 2s;
+    width: 250px;
+    /* margin-block: 10px; */
+    margin: auto;
+    background-size: cover;
+    /* height: 250px; */
+    margin-block: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 5px black;
+    
+    /* box-shadow: 0px 5px 10px 5px black; */
+    /* transition: box-shadow 2s; */
+}
+.photo img{
+    width: 100%;
+}
+.Whois:hover,
+.photo div:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 10px 15px 10px black;
+
+}
+
+.foot{
+    display: flex;
+
+}
+
+
+
+
+.Quali{
+    display: flex;
+}

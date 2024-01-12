@@ -1,97 +1,328 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-    <header>
-        <!-- <img src="./img/logo.jpeg" alt=""> -->
-        <nav>
 
-            <a id="home" href="#">Qui sommes-nous</a>
-            <a id="realisation" href="./page/Réalisation.html">Réalisation</a>
-            <a id="qualification" href="./page/Classification.html">Classification</a>
-            <a id="contact" href="./page/Contact.html">Contact</a>
-        </nav>
-    </header>
-    <article>
-        <!-- <div class="bgimg-1" id="home"> -->
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button">Accueil</a>
+            <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Qui sommes-nous</a>
+            <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Nos
+                Réalisations</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">Accueil</a>
+            <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">Qui sommes-nous</a>
+            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+        </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
         <div class="carousel">
             <!-- list item -->
             <div class="list">
                 <div class="item" id="home">
-                    <img src="./img/img1.jpg">
+                    <img src="./img/img1_old.jpg">
                     <div class="content">
-                        <div class="author">Patrimoine</div>
-                        <div class="title">Patrimoine Energie</div>
-                        <div class="topic">Qui sommes nous</div>
-                        <div class="des">
-                            <!-- lorem 50 -->
+                        <div class="author"></div>
+                        <div class="title">Patrimoine </div>
+                        <div class="topic">Energie</div>
+                        <!-- <div class="des">
+                            <!-- lorem 50 
                             Fondée en 2010, nous sommes spécialisé dans l'installation de solution
                             écologique
                             tel que les pompes à chaleur, chauffe eau solaire ou thermaudynamique
 
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
+
 
 
             </div>
-            <!-- list thumnail -->
-            <div class="thumbnail">
-                <div class="item">
-                    <img src="./img/img1.jpg">
-                    <div class="content">
-                        <div class="title">
-                            Qui sommes-nous
-                        </div>
-                        <div class="description">
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./img/img2.jpg">
-                    <div class="content">
-                        <div class="title">
-                            Nos Réalisations
-                        </div>
-                        <div class="description">
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./img/img3.jpg">
-                    <div class="content">
-                        <div class="title">
-                            Nos Qualifications
-                        </div>
-                        <div class="description">
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./img/img4.jpg">
-                    <div class="content">
-                        <div class="title">
-                            Contact
-                        </div>
-                        <div class="description">
-                            Description
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">Qui Sommes nous</h3>
+        <p class="w3-center"><em>I love photography</em></p>
+        <div class="separation">
+            <div class="logo" style="display: flex;">
+                <img src="./img/logo1.png" alt="">
+                <p>Fondée en 2010, nous sommes spécialisé dans l'installation de solution
+                    écologique
+                    tel que les pompes à chaleur, chauffe eau solaire ou thermaudynamique
+</p>
             </div>
-            <!-- next prev -->
-            <!-- time running -->
-            <!-- <div class="time"></div> -->
+
         </div>
 
+        <!-- <div class="w3-row separation">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
+                <img src="https://www.w3schools.com/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me"
+                    width="500" height="333">
+            </div> -->
+
+        <!-- Hide this text on small devices -->
+        <!-- <div class="w3-col m6 w3-hide-small whois w3-padding-large ter">
+                <p>Fondée en 2010, nous sommes spécialisé dans l'installation de
+                    solution
+                    écologique
+                    tel que les pompes à chaleur, chauffe eau solaire ou
+                    thermaudynamique</p>
+            </div>
+        </div> -->
+
+    </div>
 
 
-    </article>
-    <!-- <script src="./script.js"></script> -->
+
+    <!-- Second Parallax Image with Portfolio Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">NOTRE DOMAINE</span>
+        </div>
+    </div>
+
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+        <h3 class="w3-center">Notre domaine d'intervention</h3>
+                <div class="wrapper">
+                    <div class="container">
+                        <input type="radio" name="slide" id="c1" checked>
+                        <label for="c1" class="card">
+                            <div class="row">
+                                <div class="icon">
+                                    1
+                                </div>
+                                <div class="description">
+                                    <h4>Qui Sommes-nous</h4>
+                                    <p> Fondée en 2010, nous sommes spécialisé dans l'installation de
+                                        solution
+                                        écologique
+                                        tel que les pompes à chaleur, chauffe eau solaire ou
+                                        thermaudynamique
+                                    </p>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="c2">
+                        <label for="c2" class="card">
+                            <div class="row">
+                                <div class="icon">
+                                    2
+                                </div>
+                                <div class="description">
+                                    <h4>Digital Technology</h4>
+                                    <p>the digital Technology and her impact - creative activities</p>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="c3">
+                        <label for="c3" class="card">
+                            <div class="row">
+                                <div class="icon">
+                                    3
+                                </div>
+                                <div class="description">
+                                    <h4>global</h4>
+                                    <div class="tabl">
+                                        <div>panneau solaire</div>
+                                        <div>tuyeau</div>
+                                        <div> circuit</div>
+                                        <div>electrique</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="c4">
+                        <label for="c4" class="card">
+                            <div class="row">
+                                <div class="icon">
+                                    4
+                                </div>
+                                <div class="description">
+                                    <h4>Natural</h4>
+                                    <p>Winter has so much to offer - creative activities</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+        <h3 class="w3-center">Qualification</h3>
+        <div class="w3-row-padding w3-center">
+            <div class="w3-col m3">
+                <img src="./img/Qualificatio/qualisol.png" style="width:100% " onclick="onClick(this)"
+                    class="w3-hover-opacity" alt="The mist over the mountains">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="./img/Qualificatio/qualipv.png" style="width:100%; height:120px" onclick="onClick(this)"
+                    class="w3-hover-opacity" alt="Coffee beans">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="./img/Qualificatio/qualipac.png" style="width:100%" onclick="onClick(this)"
+                    class="w3-hover-opacity" alt="Bear closeup">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="./img/Qualificatio/qualibois.png" style="width:100%" onclick="onClick(this)"
+                    class="w3-hover-opacity" alt="Quiet ocean">
+            </div>
+        </div>
+<!-- 
+        <div class="w3-row-padding w3-center w3-section">
+            <div class="w3-col m3">
+                <img src="https://www.w3schools.com/w3images/p5.jpg" style="width:100%" onclick="onClick(this)"
+                    class="w3-hover-opacity" alt="The mist">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="https://www.w3schools.com/w3images/p6.jpg" style="width:100%" onclick="onClick(this)"
+                    class="w3-hover-opacity" alt="My beloved typewriter">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="https://www.w3schools.com/w3images/p7.jpg" style="width:100%" onclick="onClick(this)"
+                    class="w3-hover-opacity" alt="Empty ghost train">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="https://www.w3schools.com/w3images/p8.jpg" style="width:100%" onclick="onClick(this)"
+                    class="w3-hover-opacity" alt="Sailing">
+            </div>
+            <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+        </div> -->
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
+                class="fa fa-remove"></i></span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
+
+    <!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">NOTRE CONTACT</span>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+
+
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container">
+                <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+            </div>
+            <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Localisation : 122 Avenue de Caen Rouen, 76100<br>
+                    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +33 06.62.09.82.96
+                    <br>
+                    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: patrimoine.energie76@gmail.com
+                    <br>
+                </div>
+                <p>Commentez votre avis</p>
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                    </div>
+                    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                    <button class="w3-button w3-black w3-right w3-section" type="submit">
+                        <i class="fa fa-paper-plane"></i> Envoyer
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+            <a class="w3-button w3-round-xxlarge w3-small w3-light-grey w3-margin-bottom"
+                href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
+            <!-- Footer end. -->
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
 
 </body>
 
